@@ -1,1 +1,49 @@
-
+-------------------------------------------------------------------------------->8
+Version: 4.35.1 (173168)
+Sha1: 
+Started on: 2024/11/07 23:27:51.076
+Resources: C:\Users\rrozinov\AppData\Local\Temp\DockerDesktop\lkokrslkafe\resources
+OS: Windows 10 Enterprise
+Edition: Enterprise
+Id: 2009
+Build: 19045
+BuildLabName: 19041.1.amd64fre.vb_release.191206-1406
+File: C:\ProgramData\DockerDesktop\install-log-admin.txt
+CommandLine: "C:\Users\rrozinov\AppData\Local\Temp\DockerDesktop\lkokrslkafe\Docker Desktop Installer (2).exe" "install" -package "res:DockerDesktop" --relaunch-as-admin
+You can send feedback, including this log file, at https://github.com/docker/for-win/issues
+[2024-11-07T23:27:51.435662900Z][ManifestAndExistingInstallationLoader][I] No install path specified, looking for default installation registry key
+[2024-11-07T23:27:51.442322200Z][Installer][I] No installation found
+[2024-11-07T23:27:52.075608200Z][InstallWorkflow][I] Using package: res:DockerDesktop
+[2024-11-07T23:27:52.076610500Z][InstallWorkflow][I] Downloading
+[2024-11-07T23:27:52.937516700Z][InstallWorkflow][I] Extracting manifest
+[2024-11-07T23:27:53.409356800Z][InstallWorkflow][I] Manifest found: version=173168, displayVersion=4.35.1, channelUrl=https://desktop-stage.docker.com/win/main/amd64/appcast.xml
+[2024-11-07T23:27:53.409356800Z][InstallWorkflow][I] Checking prerequisites
+[2024-11-07T23:27:53.426362500Z][InstallWorkflow][I] Prompting for optional features
+[2024-11-07T23:27:56.851894300Z][InstallWorkflow][I] Selected backend mode: wsl-2
+[2024-11-07T23:27:56.851894300Z][InstallWorkflow][I] Unpacking artifacts
+[2024-11-07T23:29:21.881392100Z][InstallWorkflow][I] Deploying component Docker.Installer.CreateGroupAction
+[2024-11-07T23:29:22.974834400Z][InstallWorkflow][I] Deploying component Docker.Installer.AddToGroupAction
+[2024-11-07T23:29:22.999022600Z][InstallWorkflow][I] Deploying component Docker.Installer.EnableFeaturesAction
+[2024-11-07T23:29:23.034082200Z][InstallWorkflow][E] Installation failed System.Exception: Component Docker.Installer.EnableFeaturesAction failed: Not found  ---> System.Management.ManagementException: Not found 
+   at System.Management.ManagementException.ThrowWithExtendedInfo(ManagementStatus errorCode)
+   at System.Management.ManagementObject.Initialize(Boolean getObject)
+   at System.Management.ManagementBaseObject.get_ClassName()
+   at System.Management.ManagementClass.GetInstances(EnumerationOptions options)
+   at Docker.Installer.EnableFeaturesAction.GetFeaturesToEnable()
+   at Docker.Installer.EnableFeaturesAction.<DoAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Docker.Installer.InstallWorkflow.<DoHandleD4WPackageAsync>d__30.MoveNext()
+   --- End of inner exception stack trace ---
+   at Docker.Installer.InstallWorkflow.<DoHandleD4WPackageAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Docker.Installer.InstallWorkflow.<DoProcessAsync>d__23.MoveNext()
+[2024-11-07T23:29:23.036082400Z][InstallWorkflow][I] Rollbacking component Docker.Installer.AddToGroupAction
+[2024-11-07T23:29:23.036082400Z][InstallWorkflow][I] Rollbacking component Docker.Installer.CreateGroupAction
+[2024-11-07T23:29:23.036082400Z][InstallWorkflow][I] Rollbacking component Docker.Installer.UnpackArtifactsStep
+[2024-11-07T23:29:23.043761600Z][FileSystem][I] Deleting C:\Program Files\Docker\Docker
+[2024-11-07T23:29:23.284650600Z][FileSystem][I] Deleted C:\Program Files\Docker\Docker successfully
+[2024-11-07T23:29:23.284650600Z][InstallWorkflow][I] Rollbacking component Docker.Installer.ExtractManifestStep
+[2024-11-07T23:29:23.285645400Z][InstallWorkflow][I] Rollbacking component Docker.Installer.DownloadStep
